@@ -1,0 +1,123 @@
+body {
+  background: radial-gradient(
+    circle,
+    rgba(123, 209, 185, 1) 49%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.app-title {
+  font-size: 2em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  background-color: #21b5c3;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  padding: 2%;
+  width: 40%;
+  text-align: center;
+}
+
+.container li {
+  list-style-type: none;
+}
+
+.input-text {
+  border-radius: 20px;
+  border: 2px solid black;
+  color: blue;
+  float: left;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 2%;
+  width: 70%;
+}
+
+.add-btn {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: blue;
+  cursor: pointer;
+  display: inline-block;
+  font-size: large;
+  font-weight: bold;
+  height: 10%;
+  padding: 2%;
+  width: 20%;
+}
+
+.btn {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 20px;
+  color: red;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  float: right;
+  height: 10%;
+  margin-right: 5px;
+  padding: 2%;
+  width: 20%;
+}
+
+.add-btn:hover {
+  background-color: #4495d4;
+  color: white;
+  font-size: x-large;
+  height: 10%;
+  padding: 1.2%;
+}
+
+.btn:hover {
+  background-color: tomato;
+  color: white;
+  font-size: x-large;
+  height: 10%;
+  padding: 1.2%;
+}
+
+.add-btn:active {
+  position: relative;
+  top: 1px;
+}
+
+ul {
+  padding: 0;
+}
+
+.list-item {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 30px;
+  display: flex;
+  padding: 10px;
+  margin: 10px 5%;
+}
+
+.my-input {
+  display: none;
+}
+
+.label-text {
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  padding-left: 1%;
+  text-align: left;
+  width: 80%;
+}
