@@ -1,14 +1,13 @@
-import React from 'react';
-import logo from './logo.png';
-import './App.css';
+import React from "react";
+import logo from "./logo.png";
+import "./App.css";
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      newItem: '',
-      list: []
+      newItem: "",
+      list: [],
     };
   }
 
@@ -17,7 +16,7 @@ class App extends React.Component {
       const newItem = {
         id: Date.now(),
         value: todoValue,
-        isDone: false
+        isDone: false,
       };
 
       const list = [...this.state.list];
@@ -25,14 +24,16 @@ class App extends React.Component {
 
       this.setState({
         list,
-        newItem: ''
+        newItem: "",
       });
-    };
-  };
+    }
+  }
 
   deleteItem(id) {
     const list = [...this.state.list];
-    const updatedlist = list.filter(item => item.id !== id);
+    const updatedlist = list.filter(
+      (item) => item.id !== id
+    );
     this.setState({ list: updatedlist });
   }
 
@@ -43,40 +44,60 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <img src={logo} width="200" height="200" className='logo' alt='logo' />
-        <h1 className='app-title'>My ToDo App</h1>
+        <img
+          src={logo}
+          width="200"
+          height="200"
+          className="logo"
+          alt="logo"
+        />
+        <h1 className="app-title">My ToDo App</h1>
         <div className="container">
-          <input
-            type="text"
-            className="input-text"
-            placeholder="Add Item to ToDo"
-            required
-            value={this.state.newItem}
-            onChange={e => this.updateInput(e.target.value)}
-          />
-          <button
-            className='add-btn'
-            onClick={() => this.addItem(this.state.newItem)}
-            disabled={!this.state.newItem.length}
-          >Add
-              </button>
+          <form>
+            <input
+              type="text"
+              className="input-text"
+              placeholder="Add Item to ToDo"
+              autoFocus
+              required
+              value={this.state.newItem}
+              onChange={(e) =>
+                this.updateInput(e.target.value)
+              }
+            />
+            <button
+              className="add-btn"
+              onClick={() =>
+                this.addItem(this.state.newItem)
+              }
+              disabled={!this.state.newItem.length}
+            >
+              Add
+            </button>
+          </form>
           <div className="list">
             <ul>
-              {this.state.list.map(item => {
+              {this.state.list.map((item) => {
                 return (
-                  <li key={item.id} className='list-item'>
-                    <label className='label-text'>{item.value}</label>
+                  <li key={item.id} className="list-item">
+                    <label className="label-text">
+                      {item.value}
+                    </label>
                     <button
-                      className='btn'
-                      onClick={() => this.deleteItem(item.id)}
-                    >Delete</button>
+                      className="btn"
+                      onClick={() =>
+                        this.deleteItem(item.id)
+                      }
+                    >
+                      <i className="fas fa-trash"></i>
+                    </button>
                   </li>
                 );
               })}
             </ul>
           </div>
         </div>
-      </div >
+      </div>
     );
   }
 }
