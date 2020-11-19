@@ -1,3 +1,5 @@
-# 2nd React App
+# To Do App
 
-Tried to make `ToDo App` and succeeded.
+To Make ToDo and Delete It.
+
+This is my 2nd React App. I used class component here.
